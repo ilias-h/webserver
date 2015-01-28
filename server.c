@@ -34,10 +34,8 @@ static char * parse(char * str, char c){
 static int string_equal(char* str, char* str2, int size){
 	int i = 0;
 	while(i<size){
-		if(*str != *str2)
+		if(*(str + i) != *(str2 + i))
 			return 0;
-		str++;
-		str2++;
 		i++;
 	}
 	return 1;
